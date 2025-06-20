@@ -34,6 +34,7 @@ def main():
                              shuffle=False,
                              pin_memory=False,
                              drop_last=False)
+    print(f"Total number of batches in the dataset: {len(data_loader)}")
 
     print('Creating Model')
     model = train_utils.create_model(hypes)

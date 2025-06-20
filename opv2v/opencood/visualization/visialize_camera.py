@@ -4,6 +4,7 @@ import opencood.data_utils.datasets
 from opencood.hypes_yaml.yaml_utils import load_yaml
 from opencood.utils import box_utils, common_utils, camera_utils
 from opencood.data_utils.datasets.camera_only.base_camera_dataset import BaseCameraDataset
+import matplotlib.pyplot as plt
 
 def vis_parser():
     parser = argparse.ArgumentParser(description="data visualization")
@@ -27,3 +28,8 @@ if __name__ == '__main__':
         opencda_dataset.visualize_all_agents_bbx(data_example)
 
     camera_utils.plot_all_agents(draw_image_list, cav_id_list)
+    
+    # ✅ ADDED: Save the plotted image instead of showing it
+    plt.tight_layout()  # Adjust layout to prevent overlap
+    plt.savefig(f'scene_{opt.scene}_sample_{opt.sample}.png')  
+    print(f"[INFO] Saved: scene_{opt.scene}_sample_{opt.sample}.png")  # ✅ ADDED: Confirmation

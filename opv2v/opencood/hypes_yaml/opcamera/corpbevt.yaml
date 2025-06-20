@@ -1,6 +1,6 @@
 name: fax # only used for demonstration data api
-root_dir: '/data/opv2v/train'
-validate_dir: '/data/opv2v/validate'
+root_dir: '/home/shenzheng_google_com/Projects/Inf_Perception/Datasets/OPV2V/merged/train'
+validate_dir: '/home/shenzheng_google_com/Projects/Inf_Perception/Datasets/OPV2V/merged/validate'
 
 
 train_params:

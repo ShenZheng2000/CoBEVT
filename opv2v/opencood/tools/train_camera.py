@@ -81,6 +81,8 @@ def main():
                                 shuffle=False,
                                 pin_memory=False,
                                 drop_last=True)
+    print(f"Total number of batches in the training dataset: {len(train_loader)}")
+    print(f"Total number of batches in the validation dataset: {len(val_loader)}")
 
     print('---------------Creating Model------------------')
     model = train_utils.create_model(hypes)

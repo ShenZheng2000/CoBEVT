@@ -1,6 +1,6 @@
 name: base_camera # only used for demonstration data api
-root_dir: '/data/opv2v/test'
-validate_dir: '/data/opv2v/test'
+root_dir: '/home/shenzheng_google_com/Projects/Inf_Perception/Datasets/OPV2V/merged/test'
+validate_dir: '/home/shenzheng_google_com/Projects/Inf_Perception/Datasets/OPV2V/merged/test'
 
 
 train_params:

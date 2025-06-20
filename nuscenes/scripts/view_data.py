@@ -31,11 +31,24 @@ def main(cfg):
 
     print(f'{cfg.split}: {len(loader)} total samples')
 
+    # 🔸 ADD: create folder to save output
+    save_dir = Path(hydra.utils.get_original_cwd()) / 'debug_output'
+    save_dir.mkdir(parents=True, exist_ok=True)
+
+    # 🔸 ADD: counter for filenames
+    i = 0
+
     for batch in tqdm(loader):
         img = np.vstack(viz(batch))
 
-        cv2.imshow('debug', cv2.cvtColor(img, cv2.COLOR_RGB2BGR))
-        cv2.waitKey(1)
+        # 🔸 REMOVE or COMMENT OUT display lines:
+        # cv2.imshow('debug', cv2.cvtColor(img, cv2.COLOR_RGB2BGR))
+        # cv2.waitKey(1)
+
+        # 🔸 ADD: save image to disk
+        out_path = save_dir / f'frame_{i:04d}.png'
+        cv2.imwrite(str(out_path), cv2.cvtColor(img, cv2.COLOR_RGB2BGR))
+        i += 1
 
 
 if __name__ == '__main__':
