@@ -11,3 +11,4 @@ run_inference() {
 # run_inference opencood/logs/fax_2025_06_18_21_19_31_epoch_91
 # run_inference opencood/logs/fax_2025_06_21_03_41_22
 # run_inference opencood/logs/fax_2025_06_21_03_41_22_epoch_91
+run_inference opencood/logs/corpbevt_2025_06_22_17_40_34

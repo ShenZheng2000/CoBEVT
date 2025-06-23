@@ -16,5 +16,4 @@ run_inference() {
 # TODO: write a new script to demo on 2 run segments (in argoverse v2)
 #  → 5ccb359a-2986-466c-88b2-a16f51774a8f ↔ f7cf93d8-f7bd-3799-8500-fbe842a96f63 within 50.0m
 
-# TODO: argoverse v2 does not have rear cameras, '
-# should we try nuscenes instead (at least have single-agent source code)
+# let's try nuscenes intead, since argoverse has no rear/back cameras

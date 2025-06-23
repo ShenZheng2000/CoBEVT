@@ -1,0 +1,2 @@
+# TODO: modify this code for nuscene (converted format) visualization
+# python opencood/visualization/visialize_camera.py --scene 0 --sample 0 --yaml opencood/hypes_yaml/opcamera/base_camera_nuscenes.yaml
