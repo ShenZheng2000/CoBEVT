@@ -16,11 +16,12 @@
 #     --hypes_yaml opencood/hypes_yaml/opcamera/fax.yaml
 
 # 1.5) Move pretrained model and config to finetune folder
-# NOTE: use this timestep as a example
-timestep=2025_06_22_17_40_34
+# NOTE: use this timestep as a example (CHANGE every time!)
+# timestep=2025_06_22_17_40_34
+timestep=2025_06_23_23_34_48
 
 # mkdir -p opencood/logs/corpbevt_${timestep}
-# cp opencood/logs/fax_${timestep}/net_epoch86.pth opencood/logs/corpbevt_${timestep}/net_epoch1.pth
+# cp opencood/logs/fax_${timestep}/net_epoch91.pth opencood/logs/corpbevt_${timestep}/net_epoch1.pth
 # cp opencood/hypes_yaml/opcamera/corpbevt.yaml opencood/logs/corpbevt_${timestep}/config.yaml
 
 

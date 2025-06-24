@@ -2,8 +2,11 @@ name: base_camera # only used for demonstration data api
 # root_dir: '/home/shenzheng_google_com/Projects/Inf_Perception/Datasets/OPV2V/merged/test'
 # validate_dir: '/home/shenzheng_google_com/Projects/Inf_Perception/Datasets/OPV2V/merged/test'
 
-root_dir: '/home/shenzheng_google_com/Projects/Inf_Perception/Scripts/nuScenes_to_opv2v/converted_yaml'
-validate_dir: '/home/shenzheng_google_com/Projects/Inf_Perception/Scripts/nuScenes_to_opv2v/converted_yaml'
+# root_dir: '/home/shenzheng_google_com/Projects/Inf_Perception/Scripts/nuScenes_to_opv2v/converted_yaml'
+# validate_dir: '/home/shenzheng_google_com/Projects/Inf_Perception/Scripts/nuScenes_to_opv2v/converted_yaml'
+
+root_dir: '/home/shenzheng_google_com/Projects/Inf_Perception/Scripts/nuScenes_to_opv2v/nuscenes_opv2v/val'
+validate_dir: '/home/shenzheng_google_com/Projects/Inf_Perception/Scripts/nuScenes_to_opv2v/nuscenes_opv2v/val'
 
 train_params:
   batch_size: &batch_size 4
@@ -17,7 +20,8 @@ fusion:
 
 
 data_augment: []
-add_data_extension: ['bev_dynamic.png', 'bev_static.png', 'bev_lane.png', 'bev_visibility.png', 'bev_visibility_corp.png']
+# NOTE: comment these lines since bev are needed for now
+# add_data_extension: ['bev_dynamic.png', 'bev_static.png', 'bev_lane.png', 'bev_visibility.png', 'bev_visibility_corp.png']
 
 # preprocess-related
 preprocess:
@@ -30,7 +34,9 @@ preprocess:
     mean: [0.485, 0.456, 0.406]
     std: [0.229, 0.224, 0.225]
   # object evaluation range
-  cav_lidar_range: &cav_lidar [-50, -50, -3, 50, 50, 1]
+  # cav_lidar_range: &cav_lidar [-50, -50, -3, 50, 50, 1]
+  # NOTE: use larger range for nuScenes dataset
+  cav_lidar_range: &cav_lidar [-50, -50, -5, 70, 70, 3]
 
 
 # anchor box related

@@ -6,8 +6,8 @@ validate_dir: '/home/shenzheng_google_com/Projects/Inf_Perception/Datasets/OPV2V
 train_params:
   batch_size: &batch_size 1
   # epoches: &epoches 151
-  # NOTE: reduce epoches to 80
-  epoches: &epoches 80
+  # NOTE: reduce epoches to 80 (write 81:80+1)
+  epoches: &epoches 81
   eval_freq: 5
   save_freq: 5
   max_cav: &max_cav 5
